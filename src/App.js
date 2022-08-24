@@ -148,7 +148,7 @@ function App() {
   }
 
   const draw = async (ctx) => {
-    ctx.fillStyle = "#FFFFFF";
+    ctx.fillStyle = "#000";
     ctx.fillRect(0,0,ctx.canvas.width, ctx.canvas.height);
     const nbrPoint = 70;
     const ratioX = ctx.canvas.width/nbrPoint;
@@ -167,7 +167,7 @@ function App() {
           state = 0;
           ctx.fillStyle = "blue";
         }
-        ctx.fillRect(x,y,2,2);
+        //ctx.fillRect(x,y,2,2);
         listePoints.push(state);
       }
     }
@@ -293,6 +293,8 @@ function App() {
         }
         //une fois les coordonnées récupéré on les relie
         if(newCoordinate.length==2){
+          ctx.fillStyle = "#FFF";
+          ctx.strokeStyle = "#FFF";
           ctx.beginPath();
           ctx.moveTo(...newCoordinate[0]);
           ctx.lineTo(...newCoordinate[1]);
