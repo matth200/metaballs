@@ -293,7 +293,6 @@ function App() {
         }
         //une fois les coordonnées récupéré on les relie
         if(newCoordinate.length==2){
-          ctx.fillStyle = "#FFF";
           ctx.strokeStyle = "#FFF";
           ctx.beginPath();
           ctx.moveTo(...newCoordinate[0]);
